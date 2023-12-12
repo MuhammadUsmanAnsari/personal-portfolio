@@ -1,0 +1,78 @@
+.main-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // padding: 20px;
+    // background-color: #f4f2eeff;
+
+    .row {
+        flex: 1;
+
+        .sidebar {
+            height: calc(100vh - 17px);
+            background: white;
+            overflow: hidden;
+
+        }
+
+        .main-content {
+            height: calc(100vh - 17px);
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at bottom left, rgba(253, 89, 86, 0.512), transparent 20%);
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: darkgrey;
+                border-radius: 5px;
+            }
+        }
+
+    }
+}
+
+
+.bottom-buttons {
+    // background-color: orange;
+    position: fixed;
+    bottom: 2%;
+    right: 3%;
+    z-index: 100;
+}
+
+
+@media only screen and (min-width: 992px) {
+    .main-screen {
+        .row {
+            .sidebar {
+                height: calc(100vh - 31px);
+            }
+
+            .main-content {
+                height: calc(100vh - 31px);
+            }
+
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .main-screen {
+        padding: 0;
+
+        .row {
+            flex: 1;
+
+            .main-content {
+                padding-top: 65px;
+                background-image: radial-gradient(circle at bottom left, transparent, transparent 20%);
+                border-radius: 0% !important;
+                height: 100vh;
+
+            }
+        }
+    }
+}

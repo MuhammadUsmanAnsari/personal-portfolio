@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "production": "osman-arif",
+    "default": "osman-arif"
+  },
+  "targets": {},
+  "etags": {}
+}

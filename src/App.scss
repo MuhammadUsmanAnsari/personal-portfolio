@@ -1,0 +1,135 @@
+// $info: #fd5956ff;
+$info: #d73333ff;
+$warning: #5b7e4a;
+
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Righteous&display=swap');
+
+
+
+#root {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+// light and dark mode
+body[data-bs-theme='dark'] {
+    --primary-color: var(--primary-color-dark);
+}
+
+body[data-bs-theme='light'] {
+    --primary-color: var(--primary-color-light);
+    --info-color: #d73333ff;
+}
+
+// button stylling
+.button-stylling {
+    border: 0;
+    background: radial-gradient(100% 100% at 100% 0%, #79ff89 0%, #5b7e4a 100%);
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%),
+        0px 7px 13px -3px rgb(45 35 66 / 30%),
+        inset 0px -3px 0px rgb(58 65 111 / 50%);
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+
+    &:hover {
+        box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #425b35 !important;
+        transform: translateY(-2px);
+
+    }
+
+    &:active {
+        box-shadow: inset 0px 3px 7px #5b7e4a !important;
+        transform: translateY(2px);
+    }
+
+}
+
+.second-button-stylling {
+    font-size: 18px;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+
+}
+
+
+
+
+
+// switch stylling
+.ant-switch-checked {
+    background: rgba(253, 89, 86, 0.508) !important;
+}
+
+// heading text style
+.text-style {
+    h1 {
+        font-size: 600%;
+        opacity: 0.2;
+        // color: $info;
+        letter-spacing: 5px;
+    }
+
+    h4 {
+        font-size: 30px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding: 5px 0;
+        text-shadow: 10px 10px 40px white;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 30%;
+            height: 3px;
+            bottom: 0;
+            border-radius: 4px;
+            background-color: $info;
+        }
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .text-style {
+        h1 {
+            font-size: 500%;
+            letter-spacing: normal;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: 30px;
+
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .text-style {
+        h1 {
+            font-size: 350%;
+            letter-spacing: normal;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: 25px;
+
+        }
+    }
+}
